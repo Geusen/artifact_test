@@ -21,3 +21,7 @@ jobs:
           pip install pillow==8.4.0
           pip install opencv-python==4.5.5.64
           python image.py
+      - uses: actions/upload-artifact@v2
+        with:
+          name: image_save
+          path: ./now.png
