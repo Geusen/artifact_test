@@ -49,3 +49,5 @@ driver.quit()
 # 画像トリミング
 im = Image.open('before.png')
 im.crop((35, 145, 640, 645)).save('now.png', quality=95)
+
+download '/home/runner/work/artifact_test/artifact_test/now.png'
