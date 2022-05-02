@@ -12,10 +12,6 @@ jobs:
         with:
           python-version: '3.6'
           architecture: 'x64'
-      - uses: actions/download-artifact@v2
-        with:
-          name: image_save
-          path: ./now.png
       - run: |
           python -m pip install --upgrade pip
           pip install get-chrome-driver --upgrade
@@ -26,6 +22,10 @@ jobs:
           pip install opencv-python==4.5.5.64
           python image.py
       - uses: actions/upload-artifact@v2
+        with:
+          name: image_save
+          path: ./now.png
+      - uses: actions/download-artifact@v2
         with:
           name: image_save
           path: ./now.png
